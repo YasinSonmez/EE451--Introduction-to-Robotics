@@ -1,0 +1,28 @@
+[01m[K/home/yasin/EE451/Project_1/src/pr_move/src/pr_move_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/yasin/EE451/Project_1/src/pr_move/src/pr_move_node.cpp:136:22:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmoveit::planning_interface::MoveGroupInterface::execute()[m[K’
+   move_group.execute([01;31m[K)[m[K;
+                      [01;31m[K^[m[K
+In file included from [01m[K/home/yasin/EE451/Project_1/src/pr_move/src/pr_move_node.cpp:36:0[m[K:
+[01m[K/opt/ros/melodic/include/moveit/move_group_interface/move_group_interface.h:717:19:[m[K [01;36m[Knote: [m[Kcandidate: moveit::planning_interface::MoveItErrorCode moveit::planning_interface::MoveGroupInterface::execute(const moveit::planning_interface::MoveGroupInterface::Plan&)
+   MoveItErrorCode [01;36m[Kexecute[m[K(const Plan& plan);
+                   [01;36m[K^~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/moveit/move_group_interface/move_group_interface.h:717:19:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/opt/ros/melodic/include/moveit/move_group_interface/move_group_interface.h:720:19:[m[K [01;36m[Knote: [m[Kcandidate: moveit::planning_interface::MoveItErrorCode moveit::planning_interface::MoveGroupInterface::execute(const RobotTrajectory&)
+   MoveItErrorCode [01;36m[Kexecute[m[K(const moveit_msgs::RobotTrajectory& trajectory);
+                   [01;36m[K^~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/moveit/move_group_interface/move_group_interface.h:720:19:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/yasin/EE451/Project_1/src/pr_move/src/pr_move_node.cpp:165:22:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmoveit::planning_interface::MoveGroupInterface::execute()[m[K’
+   move_group.execute([01;31m[K)[m[K;
+                      [01;31m[K^[m[K
+In file included from [01m[K/home/yasin/EE451/Project_1/src/pr_move/src/pr_move_node.cpp:36:0[m[K:
+[01m[K/opt/ros/melodic/include/moveit/move_group_interface/move_group_interface.h:717:19:[m[K [01;36m[Knote: [m[Kcandidate: moveit::planning_interface::MoveItErrorCode moveit::planning_interface::MoveGroupInterface::execute(const moveit::planning_interface::MoveGroupInterface::Plan&)
+   MoveItErrorCode [01;36m[Kexecute[m[K(const Plan& plan);
+                   [01;36m[K^~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/moveit/move_group_interface/move_group_interface.h:717:19:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/opt/ros/melodic/include/moveit/move_group_interface/move_group_interface.h:720:19:[m[K [01;36m[Knote: [m[Kcandidate: moveit::planning_interface::MoveItErrorCode moveit::planning_interface::MoveGroupInterface::execute(const RobotTrajectory&)
+   MoveItErrorCode [01;36m[Kexecute[m[K(const moveit_msgs::RobotTrajectory& trajectory);
+                   [01;36m[K^~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/moveit/move_group_interface/move_group_interface.h:720:19:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+make[2]: *** [CMakeFiles/pr_move_node.dir/src/pr_move_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/pr_move_node.dir/all] Error 2
+make: *** [all] Error 2

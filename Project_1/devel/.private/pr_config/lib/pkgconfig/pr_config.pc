@@ -1,0 +1,8 @@
+prefix=/home/yasin/EE451/Project_1/devel/.private/pr_config
+
+Name: pr_config
+Description: Description of pr_config
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

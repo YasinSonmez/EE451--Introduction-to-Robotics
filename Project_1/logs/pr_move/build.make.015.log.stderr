@@ -1,0 +1,10 @@
+[01m[K/home/yasin/EE451/Project_1/src/pr_move/src/pr_move_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/yasin/EE451/Project_1/src/pr_move/src/pr_move_node.cpp:189:39:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kconst moveit::core::JointModelGroup* joint_model_group[m[K’
+   const robot_state::JointModelGroup* [01;31m[Kjoint_model_group[m[K = kinematic_model->getJointModelGroup("pr_arm");
+                                       [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yasin/EE451/Project_1/src/pr_move/src/pr_move_node.cpp:77:39:[m[K [01;36m[Knote: [m[K‘[01m[Kconst moveit::core::JointModelGroup* joint_model_group[m[K’ previously declared here
+   const robot_state::JointModelGroup* [01;36m[Kjoint_model_group[m[K =
+                                       [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/pr_move_node.dir/src/pr_move_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/pr_move_node.dir/all] Error 2
+make: *** [all] Error 2

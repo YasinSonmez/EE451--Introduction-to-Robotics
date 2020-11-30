@@ -1,0 +1,27 @@
+[35m[1mScanning dependencies of target pr_move_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/pr_move_node.dir/src/pr_move_node.cpp.o[0m
+[01m[K/home/yasin/EE451/Project_1/src/pr_move/src/pr_move_node.cpp:217:107:[m[K [01;31m[Kerror: [m[Kmacro "ROS_INFO_STREAM" passed 3 arguments, but takes just 1
+    ROS_INFO_STREAM("Transformed Translation 1: \n" << transformed[0],transformed[1],transformed[2] << "\n"[01;31m[K)[m[K;
+                                                                                                           [01;31m[K^[m[K
+[01m[K/home/yasin/EE451/Project_1/src/pr_move/src/pr_move_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/yasin/EE451/Project_1/src/pr_move/src/pr_move_node.cpp:209:19:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[KEigen::Matrix4d transformation[m[K’
+   Eigen::Matrix4d [01;31m[Ktransformation[m[K;
+                   [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/yasin/EE451/Project_1/src/pr_move/src/pr_move_node.cpp:199:19:[m[K [01;36m[Knote: [m[K‘[01m[KEigen::Matrix4d transformation[m[K’ previously declared here
+   Eigen::Matrix4d [01;36m[Ktransformation[m[K;
+                   [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/yasin/EE451/Project_1/src/pr_move/src/pr_move_node.cpp:210:19:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[KEigen::Vector4d vector[m[K’
+   Eigen::Vector4d [01;31m[Kvector[m[K;
+                   [01;31m[K^~~~~~[m[K
+[01m[K/home/yasin/EE451/Project_1/src/pr_move/src/pr_move_node.cpp:200:19:[m[K [01;36m[Knote: [m[K‘[01m[KEigen::Vector4d vector[m[K’ previously declared here
+   Eigen::Vector4d [01;36m[Kvector[m[K;
+                   [01;36m[K^~~~~~[m[K
+[01m[K/home/yasin/EE451/Project_1/src/pr_move/src/pr_move_node.cpp:217:4:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K;[m[K’ before ‘[01m[KROS_INFO_STREAM[m[K’
+    [01;31m[KROS_INFO_STREAM[m[K("Transformed Translation 1: \n" << transformed[0],transformed[1],transformed[2] << "\n");
+    [01;31m[K^~~~~~~~~~~~~~~[m[K
+CMakeFiles/pr_move_node.dir/build.make:81: recipe for target 'CMakeFiles/pr_move_node.dir/src/pr_move_node.cpp.o' failed
+make[2]: *** [CMakeFiles/pr_move_node.dir/src/pr_move_node.cpp.o] Error 1
+CMakeFiles/Makefile2:274: recipe for target 'CMakeFiles/pr_move_node.dir/all' failed
+make[1]: *** [CMakeFiles/pr_move_node.dir/all] Error 2
+Makefile:159: recipe for target 'all' failed
+make: *** [all] Error 2

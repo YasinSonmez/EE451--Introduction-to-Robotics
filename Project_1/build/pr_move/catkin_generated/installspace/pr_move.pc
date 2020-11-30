@@ -1,0 +1,8 @@
+prefix=/home/yasin/EE451/Project_1/install
+
+Name: pr_move
+Description: Description of pr_move
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

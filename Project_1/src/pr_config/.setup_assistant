@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: ""
+    relative_path: /home/yasin/EE451/Project_1/pr.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/origins.srdf
+  CONFIG:
+    author_name: yasin
+    author_email: sonmezyasin6006@gmail.com
+    generated_timestamp: 1606664675

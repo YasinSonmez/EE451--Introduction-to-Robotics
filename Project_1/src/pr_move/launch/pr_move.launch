@@ -1,0 +1,6 @@
+<launch>
+
+  <node name="pr_move" pkg="pr_move_node" type="pr_move_node" respawn="false" output="screen">
+  </node>
+
+</launch>

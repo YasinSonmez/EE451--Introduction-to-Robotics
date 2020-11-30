@@ -1,0 +1,54 @@
+[35m[1mScanning dependencies of target pr_move_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/pr_move_node.dir/src/pr_move_node.cpp.o[0m
+[01m[K/home/yasin/EE451/Project_1/src/pr_move/src/pr_move_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/yasin/EE451/Project_1/src/pr_move/src/pr_move_node.cpp:215:33:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[K<<[m[K’ token
+   Eigen::Vector3d transformed3d [01;31m[K<<[m[K transformed(0),transformed(1),transformed(2);
+                                 [01;31m[K^~[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:40:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/urdf/model.h:50[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/robot_model.h:43[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_state/robot_state.h:41[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/move_group_interface/move_group_interface.h:42[m[K,
+                 from [01m[K/home/yasin/EE451/Project_1/src/pr_move/src/pr_move_node.cpp:36[m[K:
+[01m[K/home/yasin/EE451/Project_1/src/pr_move/src/pr_move_node.cpp:216:55:[m[K [01;31m[Kerror: [m[K‘[01m[Ktransformed3d[m[K’ was not declared in this scope
+    ROS_INFO_STREAM("Transformed Translation 2: \n" << [01;31m[Kt[m[Kransformed3d << "\n");
+                                                       [01;31m[K^[m[K
+[01m[K/opt/ros/melodic/include/ros/console.h:358:64:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_STREAM_AT_LOCATION_WITH_FILTER[m[K’
+     __rosconsole_print_stream_at_location_with_filter__ss__ << [01;36m[Kargs[m[K; \
+                                                                [01;36m[K^~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/console.h:406:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_STREAM_AT_LOCATION[m[K’
+       [01;36m[KROSCONSOLE_PRINT_STREAM_AT_LOCATION[m[K(args); \
+       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/console.h:579:43:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_STREAM_COND[m[K’
+ #define ROS_LOG_STREAM(level, name, args) [01;36m[KROS_LOG_STREAM_COND[m[K(true, level, name, args)
+                                           [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/rosconsole/macros_generated.h:111:31:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_STREAM[m[K’
+ #define ROS_INFO_STREAM(args) [01;36m[KROS_LOG_STREAM[m[K(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, args)
+                               [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/yasin/EE451/Project_1/src/pr_move/src/pr_move_node.cpp:216:4:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO_STREAM[m[K’
+    [01;36m[KR[m[KOS_INFO_STREAM("Transformed Translation 2: \n" << transformed3d << "\n");
+    [01;36m[K^[m[K
+[01m[K/home/yasin/EE451/Project_1/src/pr_move/src/pr_move_node.cpp:216:55:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ktransformed[m[K’
+    ROS_INFO_STREAM("Transformed Translation 2: \n" << [01;36m[Kt[m[Kransformed3d << "\n");
+                                                       [01;36m[K^[m[K
+[01m[K/opt/ros/melodic/include/ros/console.h:358:64:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_STREAM_AT_LOCATION_WITH_FILTER[m[K’
+     __rosconsole_print_stream_at_location_with_filter__ss__ << [01;36m[Kargs[m[K; \
+                                                                [01;36m[K^~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/console.h:406:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_STREAM_AT_LOCATION[m[K’
+       [01;36m[KROSCONSOLE_PRINT_STREAM_AT_LOCATION[m[K(args); \
+       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/console.h:579:43:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_STREAM_COND[m[K’
+ #define ROS_LOG_STREAM(level, name, args) [01;36m[KROS_LOG_STREAM_COND[m[K(true, level, name, args)
+                                           [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/rosconsole/macros_generated.h:111:31:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_STREAM[m[K’
+ #define ROS_INFO_STREAM(args) [01;36m[KROS_LOG_STREAM[m[K(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, args)
+                               [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/yasin/EE451/Project_1/src/pr_move/src/pr_move_node.cpp:216:4:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO_STREAM[m[K’
+    [01;36m[KR[m[KOS_INFO_STREAM("Transformed Translation 2: \n" << transformed3d << "\n");
+    [01;36m[K^[m[K
+CMakeFiles/pr_move_node.dir/build.make:81: recipe for target 'CMakeFiles/pr_move_node.dir/src/pr_move_node.cpp.o' failed
+make[2]: *** [CMakeFiles/pr_move_node.dir/src/pr_move_node.cpp.o] Error 1
+CMakeFiles/Makefile2:274: recipe for target 'CMakeFiles/pr_move_node.dir/all' failed
+make[1]: *** [CMakeFiles/pr_move_node.dir/all] Error 2
+Makefile:159: recipe for target 'all' failed
+make: *** [all] Error 2
