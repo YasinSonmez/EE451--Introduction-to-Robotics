@@ -31,7 +31,7 @@ rosrun manipulator_core robot_model_node
 ## Files
 - [`pr.urdf`](https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Project_2/src/urdf%20files/pr.urdf) This is the description of robot using urdf format.
 - [`robot_model.cpp`](https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Project_2/src/manipulator_core/src/robot_model.cpp) C++ code for moving the robot and getting the cordinates and transformation matrix using Moveit API.
-- [`project2_report.pdf`](https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Project_2/project2_report) Project report answering the given questions and explaining the output of the program.
+- [`project2_report.pdf`](https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Project_2/project2_report.pdf) Project report answering the given questions and explaining the output of the program.
 
 ## Creation Process
 Here are the steps I've taken to create this project:
