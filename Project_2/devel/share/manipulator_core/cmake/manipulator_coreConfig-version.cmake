@@ -1,0 +1,1 @@
+/home/yasin/EE451/Project_2/devel/.private/manipulator_core/share/manipulator_core/cmake/manipulator_coreConfig-version.cmake

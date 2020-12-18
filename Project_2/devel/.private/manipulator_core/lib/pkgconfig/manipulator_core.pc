@@ -1,0 +1,8 @@
+prefix=/home/yasin/EE451/Project_2/devel/.private/manipulator_core
+
+Name: manipulator_core
+Description: Description of manipulator_core
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

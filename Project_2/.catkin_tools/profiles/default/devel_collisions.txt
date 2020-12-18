@@ -1,0 +1,9 @@
+/home/yasin/EE451/Project_2/devel/lib/pkgconfig/pr_config.pc 2
+/home/yasin/EE451/Project_2/devel/share/pr_config/cmake/pr_configConfig-version.cmake 2
+/home/yasin/EE451/Project_2/devel/share/pr_config/cmake/pr_configConfig.cmake 2
+/home/yasin/EE451/Project_2/devel/./cmake.lock 131
+/home/yasin/EE451/Project_2/devel/share/pr_move/cmake/pr_moveConfig.cmake 2
+/home/yasin/EE451/Project_2/devel/lib/pkgconfig/pr_move.pc 2
+/home/yasin/EE451/Project_2/devel/share/pr_move/cmake/pr_moveConfig-version.cmake 2
+/home/yasin/EE451/Project_1/devel/./cmake.lock 52
+/home/yasin/EE451/Project_2/devel/lib/pr_move/pr_move_node 2

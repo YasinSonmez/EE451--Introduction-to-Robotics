@@ -1,0 +1,28 @@
+[35m[1mScanning dependencies of target robot_model_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/robot_model_node.dir/src/robot_model.cpp.o[0m
+[01m[K/home/yasin/EE451/Project_2/src/manipulator_core/src/robot_model.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/yasin/EE451/Project_2/src/manipulator_core/src/robot_model.cpp:168:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kmove_group[m[K’ was not declared in this scope
+   moveit::core::RobotStatePtr current_state = [01;31m[Kmove_group[m[K.getCurrentState();
+                                               [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/yasin/EE451/Project_2/src/manipulator_core/src/robot_model.cpp:168:47:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kgetgroups[m[K’
+   moveit::core::RobotStatePtr current_state = [01;36m[Kmove_group[m[K.getCurrentState();
+                                               [01;36m[K^~~~~~~~~~[m[K
+                                               [32m[Kgetgroups[m[K
+[01m[K/home/yasin/EE451/Project_2/src/manipulator_core/src/robot_model.cpp:179:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit::planning_interface[m[K’ has not been declared
+   moveit::[01;31m[Kplanning_interface[m[K::MoveGroupInterface::Plan my_plan;
+           [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yasin/EE451/Project_2/src/manipulator_core/src/robot_model.cpp:180:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_plan[m[K’ was not declared in this scope
+   bool success = (move_group.plan([01;31m[Kmy_plan[m[K) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
+                                   [01;31m[K^~~~~~~[m[K
+[01m[K/home/yasin/EE451/Project_2/src/manipulator_core/src/robot_model.cpp:180:55:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit::planning_interface[m[K’ has not been declared
+   bool success = (move_group.plan(my_plan) == moveit::[01;31m[Kplanning_interface[m[K::MoveItErrorCode::SUCCESS);
+                                                       [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yasin/EE451/Project_2/src/manipulator_core/src/robot_model.cpp:201:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit::planning_interface[m[K’ has not been declared
+   success = (move_group.plan(my_plan) == moveit::[01;31m[Kplanning_interface[m[K::MoveItErrorCode::SUCCESS);
+                                                  [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+CMakeFiles/robot_model_node.dir/build.make:81: recipe for target 'CMakeFiles/robot_model_node.dir/src/robot_model.cpp.o' failed
+make[2]: *** [CMakeFiles/robot_model_node.dir/src/robot_model.cpp.o] Error 1
+CMakeFiles/Makefile2:246: recipe for target 'CMakeFiles/robot_model_node.dir/all' failed
+make[1]: *** [CMakeFiles/robot_model_node.dir/all] Error 2
+Makefile:159: recipe for target 'all' failed
+make: *** [all] Error 2

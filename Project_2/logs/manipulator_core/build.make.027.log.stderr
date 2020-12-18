@@ -1,0 +1,86 @@
+In file included from [01m[K/opt/ros/melodic/include/pluginlib/./class_loader.hpp:42:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/pluginlib/class_loader.h:35[m[K,
+                 from [01m[K/home/yasin/EE451/Project_2/src/manipulator_core/src/robot_model.cpp:7[m[K:
+[01m[K/home/yasin/EE451/Project_2/src/manipulator_core/src/robot_model.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/yasin/EE451/Project_2/src/manipulator_core/src/robot_model.cpp:111:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kend_effector_state[m[K’ was not declared in this scope
+   ROS_INFO_STREAM("Transformation Matrix: \n" << [01;31m[Ke[m[Knd_effector_state.matrix() << "\n");
+                                                  [01;31m[K^[m[K
+[01m[K/opt/ros/melodic/include/ros/console.h:358:64:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_STREAM_AT_LOCATION_WITH_FILTER[m[K’
+     __rosconsole_print_stream_at_location_with_filter__ss__ << [01;36m[Kargs[m[K; \
+                                                                [01;36m[K^~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/console.h:406:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_STREAM_AT_LOCATION[m[K’
+       [01;36m[KROSCONSOLE_PRINT_STREAM_AT_LOCATION[m[K(args); \
+       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/console.h:579:43:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_STREAM_COND[m[K’
+ #define ROS_LOG_STREAM(level, name, args) [01;36m[KROS_LOG_STREAM_COND[m[K(true, level, name, args)
+                                           [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/rosconsole/macros_generated.h:111:31:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_STREAM[m[K’
+ #define ROS_INFO_STREAM(args) [01;36m[KROS_LOG_STREAM[m[K(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, args)
+                               [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/yasin/EE451/Project_2/src/manipulator_core/src/robot_model.cpp:111:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO_STREAM[m[K’
+   [01;36m[KR[m[KOS_INFO_STREAM("Transformation Matrix: \n" << end_effector_state.matrix() << "\n");
+   [01;36m[K^[m[K
+[01m[K/home/yasin/EE451/Project_2/src/manipulator_core/src/robot_model.cpp:132:71:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kconst Isometry3d {aka const Eigen::Transform<double, 3, 1>}[m[K’ and ‘[01m[Kconst Isometry3d {aka const Eigen::Transform<double, 3, 1>}[m[K’)
+   end_effector_state = kinematic_state->getGlobalLinkTransform("link4"[01;31m[K)[m[K;
+                                                                       [01;31m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Geometry:44:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/joint_model.h:47[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/joint_model_group.h:41[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/robot_model.h:47[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model_loader/robot_model_loader.h:41[m[K,
+                 from [01m[K/home/yasin/EE451/Project_2/src/manipulator_core/src/robot_model.cpp:11[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:285:39:[m[K [01;36m[Knote: [m[Kcandidate: Eigen::Transform<Scalar, Dim, Mode, _Options>& Eigen::Transform<Scalar, Dim, Mode, _Options>::operator=(const Eigen::Transform<Scalar, Dim, Mode, _Options>&) [with _Scalar = double; int _Dim = 3; int _Mode = 1; int _Options = 0] <near match>
+   EIGEN_DEVICE_FUNC inline Transform& [01;36m[Koperator[m[K=(const Transform& other)
+                                       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:285:39:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Isometry3d* {aka const Eigen::Transform<double, 3, 1>*}[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:303:39:[m[K [01;36m[Knote: [m[Kcandidate: template<class OtherDerived> Eigen::Transform<Scalar, Dim, Mode, _Options>& Eigen::Transform<Scalar, Dim, Mode, _Options>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Dim = 3; int _Mode = 1; int _Options = 0]
+   EIGEN_DEVICE_FUNC inline Transform& [01;36m[Koperator[m[K=(const EigenBase<OtherDerived>& other)
+                                       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:303:39:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/yasin/EE451/Project_2/src/manipulator_core/src/robot_model.cpp:132:71:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Isometry3d {aka const Eigen::Transform<double, 3, 1>}[m[K’ is not derived from ‘[01m[Kconst Eigen::EigenBase<Derived>[m[K’
+   end_effector_state = kinematic_state->getGlobalLinkTransform("link4"[01;36m[K)[m[K;
+                                                                       [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Geometry:44:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/joint_model.h:47[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/joint_model_group.h:41[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/robot_model.h:47[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model_loader/robot_model_loader.h:41[m[K,
+                 from [01m[K/home/yasin/EE451/Project_2/src/manipulator_core/src/robot_model.cpp:11[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:369:32:[m[K [01;36m[Knote: [m[Kcandidate: template<class OtherDerived> Eigen::Transform<Scalar, Dim, Mode, _Options>& Eigen::Transform<Scalar, Dim, Mode, _Options>::operator=(const Eigen::ReturnByValue<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Dim = 3; int _Mode = 1; int _Options = 0]
+   EIGEN_DEVICE_FUNC Transform& [01;36m[Koperator[m[K=(const ReturnByValue<OtherDerived>& other)
+                                [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:369:32:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/yasin/EE451/Project_2/src/manipulator_core/src/robot_model.cpp:132:71:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Isometry3d {aka const Eigen::Transform<double, 3, 1>}[m[K’ is not derived from ‘[01m[Kconst Eigen::ReturnByValue<Derived>[m[K’
+   end_effector_state = kinematic_state->getGlobalLinkTransform("link4"[01;36m[K)[m[K;
+                                                                       [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Geometry:44:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/joint_model.h:47[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/joint_model_group.h:41[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/robot_model.h:47[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model_loader/robot_model_loader.h:41[m[K,
+                 from [01m[K/home/yasin/EE451/Project_2/src/manipulator_core/src/robot_model.cpp:11[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:1001:62:[m[K [01;36m[Knote: [m[Kcandidate: Eigen::Transform<Scalar, Dim, Mode, Options>& Eigen::Transform<Scalar, Dim, Mode, _Options>::operator=(const TranslationType&) [with _Scalar = double; int _Dim = 3; int _Mode = 1; int _Options = 0; Eigen::Transform<Scalar, Dim, Mode, _Options>::TranslationType = Eigen::Translation<double, 3>]
+ EIGEN_DEVICE_FUNC inline Transform<Scalar,Dim,Mode,Options>& [01;36m[KTransform<Scalar,Dim,Mode,Options>[m[K::operator=(const TranslationType& t)
+                                                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:1001:62:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst Isometry3d {aka const Eigen::Transform<double, 3, 1>}[m[K’ to ‘[01m[Kconst TranslationType& {aka const Eigen::Translation<double, 3>&}[m[K’
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:1018:62:[m[K [01;36m[Knote: [m[Kcandidate: Eigen::Transform<Scalar, Dim, Mode, Options>& Eigen::Transform<Scalar, Dim, Mode, _Options>::operator=(const Eigen::UniformScaling<_Scalar>&) [with _Scalar = double; int _Dim = 3; int _Mode = 1; int _Options = 0]
+ EIGEN_DEVICE_FUNC inline Transform<Scalar,Dim,Mode,Options>& [01;36m[KTransform<Scalar,Dim,Mode,Options>[m[K::operator=(const UniformScaling<Scalar>& s)
+                                                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:1018:62:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst Isometry3d {aka const Eigen::Transform<double, 3, 1>}[m[K’ to ‘[01m[Kconst Eigen::UniformScaling<double>&[m[K’
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:599:39:[m[K [01;36m[Knote: [m[Kcandidate: template<class Derived> Eigen::Transform<Scalar, Dim, Mode, Options>& Eigen::Transform<Scalar, Dim, Mode, _Options>::operator=(const Eigen::RotationBase<Derived, Dim>&) [with Derived = Derived; _Scalar = double; int _Dim = 3; int _Mode = 1; int _Options = 0]
+   EIGEN_DEVICE_FUNC inline Transform& [01;36m[Koperator[m[K=(const RotationBase<Derived,Dim>& r);
+                                       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:599:39:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/yasin/EE451/Project_2/src/manipulator_core/src/robot_model.cpp:132:71:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Isometry3d {aka const Eigen::Transform<double, 3, 1>}[m[K’ is not derived from ‘[01m[Kconst Eigen::RotationBase<Derived, 3>[m[K’
+   end_effector_state = kinematic_state->getGlobalLinkTransform("link4"[01;36m[K)[m[K;
+                                                                       [01;36m[K^[m[K
+[01m[K/home/yasin/EE451/Project_2/src/manipulator_core/src/robot_model.cpp:170:62:[m[K [01;31m[Kerror: [m[K‘[01m[Kjo[m[K’ was not declared in this scope
+                                kinematic_state->getLinkModel([01;31m[Kjo[m[K int_model_group->getLinkModelNames().back()),
+                                                              [01;31m[K^~[m[K
+[01m[K/home/yasin/EE451/Project_2/src/manipulator_core/src/robot_model.cpp:170:62:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kjn[m[K’
+                                kinematic_state->getLinkModel([01;36m[Kjo[m[K int_model_group->getLinkModelNames().back()),
+                                                              [01;36m[K^~[m[K
+                                                              [32m[Kjn[m[K
+make[2]: *** [CMakeFiles/robot_model_node.dir/src/robot_model.cpp.o] Error 1
+make[1]: *** [CMakeFiles/robot_model_node.dir/all] Error 2
+make: *** [all] Error 2

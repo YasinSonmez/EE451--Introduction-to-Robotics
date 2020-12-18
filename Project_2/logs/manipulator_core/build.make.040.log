@@ -1,0 +1,4 @@
+[35m[1mScanning dependencies of target robot_model_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/robot_model_node.dir/src/robot_model.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/yasin/EE451/Project_2/devel/.private/manipulator_core/lib/manipulator_core/robot_model_node[0m
+[100%] Built target robot_model_node

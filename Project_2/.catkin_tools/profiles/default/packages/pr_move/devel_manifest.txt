@@ -1,0 +1,6 @@
+pr_move
+/home/yasin/EE451/Project_2/devel/.private/pr_move/cmake.lock /home/yasin/EE451/Project_2/devel/./cmake.lock
+/home/yasin/EE451/Project_2/devel/.private/pr_move/share/pr_move/cmake/pr_moveConfig.cmake /home/yasin/EE451/Project_2/devel/share/pr_move/cmake/pr_moveConfig.cmake
+/home/yasin/EE451/Project_2/devel/.private/pr_move/share/pr_move/cmake/pr_moveConfig-version.cmake /home/yasin/EE451/Project_2/devel/share/pr_move/cmake/pr_moveConfig-version.cmake
+/home/yasin/EE451/Project_2/devel/.private/pr_move/lib/pr_move/pr_move_node /home/yasin/EE451/Project_2/devel/lib/pr_move/pr_move_node
+/home/yasin/EE451/Project_2/devel/.private/pr_move/lib/pkgconfig/pr_move.pc /home/yasin/EE451/Project_2/devel/lib/pkgconfig/pr_move.pc

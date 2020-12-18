@@ -1,0 +1,5 @@
+pr_config
+/home/yasin/EE451/Project_2/devel/.private/pr_config/cmake.lock /home/yasin/EE451/Project_2/devel/./cmake.lock
+/home/yasin/EE451/Project_2/devel/.private/pr_config/share/pr_config/cmake/pr_configConfig-version.cmake /home/yasin/EE451/Project_2/devel/share/pr_config/cmake/pr_configConfig-version.cmake
+/home/yasin/EE451/Project_2/devel/.private/pr_config/share/pr_config/cmake/pr_configConfig.cmake /home/yasin/EE451/Project_2/devel/share/pr_config/cmake/pr_configConfig.cmake
+/home/yasin/EE451/Project_2/devel/.private/pr_config/lib/pkgconfig/pr_config.pc /home/yasin/EE451/Project_2/devel/lib/pkgconfig/pr_config.pc
