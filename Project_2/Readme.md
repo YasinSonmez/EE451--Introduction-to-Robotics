@@ -2,16 +2,16 @@
 
 ## Introduction
 
-This project is focused on using a previously created PR robot to calculate forwards and inverse kinematics using the ROS Moveit interface.
+This project is focused on using previously created PR robot to calculate forwards and inverse kinematics using the ROS Moveit interface.
 
-<img src="https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Images/pr_robot_velocity.gif" width="600">
+<img src="https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Images/pr_transform.png" width="600">
 
 ## Dependecies
 - ROS
 - Moveit
 
 ## Running the Code
-- First, open the Project_3 folder and build the catkin workspace:
+- First open the Project_2 folder and build the catkin workspace:
 ```
 catkin build
 ```
@@ -23,18 +23,15 @@ roslaunch pr_config demo.launch
 ```
 rosrun manipulator_core robot_model_node 
 ```
-- First, you should see the Jacobian matrix for the random position.
-- Then you will see the jacobian matrix, velocity, angular velocity, differential position, and differential angle for every time step using the following formulas for joint velocities:
-<img src="https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Images/joint_velocities.png" width="800">
-
-- Then the robot will move towards intended coordinates differentially
-
-Note: I have implemented two methods to move the robot. First, using the differential coordinates to update the intended coordinates and moving towards them. Second, using the updated joint values to update the state of the robot. The first solution gives errors sometimes that is why I have commented it out in the code.
+- First you should see the robot joint values.
+- Then you will see the intended joint values and corresponding transformation matrices and end effectors coordinates.
+- Then the result of inverse kinematics which should be same as intended joint values.
+- Finally you should see the robot plan and move through it's workspace.
 
 ## Files
-- [`pr.urdf`](https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Project_3/src/urdf%20files/pr.urdf) This is the description of the robot using urdf format.
-- [`robot_model.cpp`](https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Project_3/src/manipulator_core/src/robot_model.cpp) C++ code for moving the robot and getting the coordinates and jacobian matrix using Moveit API.
-- [`project3_report.pdf`](https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Project_3/project3_report.pdf) Project report answering the given questions and explaining the output of the program.
+- [`pr.urdf`](https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Project_2/src/urdf%20files/pr.urdf) This is the description of robot using urdf format.
+- [`robot_model.cpp`](https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Project_2/src/manipulator_core/src/robot_model.cpp) C++ code for moving the robot and getting the cordinates and transformation matrix using Moveit API.
+- [`project2_report.pdf`](https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Project_2/project2_report.pdf) Project report answering the given questions and explaining the output of the program.
 
 ## Creation Process
 Here are the steps I've taken to create this project:
@@ -43,5 +40,5 @@ Here are the steps I've taken to create this project:
 ```
 roslaunch moveit_setup_assistant setup_assistant.launch
 ```
-3. Created package 'manipulator core' to move the robot and calculate the jacobian matrices using Moveit
+3. Created package manipulator core to move the robot and calculate the transformation matrices using Moveit
    - Edited cmakelists.txt to include necessary packages and made the code executable 
