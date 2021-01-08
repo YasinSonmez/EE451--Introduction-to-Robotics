@@ -1,0 +1,1 @@
+/home/yasin/EE451/Project_3/devel/.private/manipulator_core/lib/pkgconfig/manipulator_core.pc

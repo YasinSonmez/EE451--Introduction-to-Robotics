@@ -1,0 +1,8 @@
+controller_list:
+  - name: fake_pr_move_controller
+    joints:
+      - p
+      - r
+initial:  # Define initial robot poses.
+  - group: pr_move
+    pose: zero_state

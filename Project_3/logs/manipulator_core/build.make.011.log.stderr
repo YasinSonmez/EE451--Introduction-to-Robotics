@@ -1,0 +1,46 @@
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:203:43:[m[K [01;31m[Kerror: [m[Kstray â€˜[01m[K\342[m[Kâ€™ in program
+       joint_group_positions[0] -= 0.1/100 [01;31m[Kâ[m[Kˆ’ 0.01/100*(k/100 âˆ’ 5);
+                                           [01;31m[K^[m[K
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:203:44:[m[K [01;31m[Kerror: [m[Kstray â€˜[01m[K\210[m[Kâ€™ in program
+       joint_group_positions[0] -= 0.1/100 â[01;31m[Kˆ[m[K’ 0.01/100*(k/100 âˆ’ 5);
+                                            [01;31m[K^[m[K
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:203:45:[m[K [01;31m[Kerror: [m[Kstray â€˜[01m[K\222[m[Kâ€™ in program
+       joint_group_positions[0] -= 0.1/100 âˆ[01;31m[K’[m[K 0.01/100*(k/100 âˆ’ 5);
+                                             [01;31m[K^[m[K
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:203:63:[m[K [01;31m[Kerror: [m[Kstray â€˜[01m[K\342[m[Kâ€™ in program
+       joint_group_positions[0] -= 0.1/100 âˆ’ 0.01/100*(k/100 [01;31m[Kâ[m[Kˆ’ 5);
+                                                               [01;31m[K^[m[K
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:203:64:[m[K [01;31m[Kerror: [m[Kstray â€˜[01m[K\210[m[Kâ€™ in program
+       joint_group_positions[0] -= 0.1/100 âˆ’ 0.01/100*(k/100 â[01;31m[Kˆ[m[K’ 5);
+                                                                [01;31m[K^[m[K
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:203:65:[m[K [01;31m[Kerror: [m[Kstray â€˜[01m[K\222[m[Kâ€™ in program
+       joint_group_positions[0] -= 0.1/100 âˆ’ 0.01/100*(k/100 âˆ[01;31m[K’[m[K 5);
+                                                                 [01;31m[K^[m[K
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:204:41:[m[K [01;31m[Kerror: [m[Kstray â€˜[01m[K\342[m[Kâ€™ in program
+       joint_group_positions[1] -= 1/100 [01;31m[Kâ[m[Kˆ’ 0.1/100*(k/100 âˆ’ 5); // radians
+                                         [01;31m[K^[m[K
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:204:42:[m[K [01;31m[Kerror: [m[Kstray â€˜[01m[K\210[m[Kâ€™ in program
+       joint_group_positions[1] -= 1/100 â[01;31m[Kˆ[m[K’ 0.1/100*(k/100 âˆ’ 5); // radians
+                                          [01;31m[K^[m[K
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:204:43:[m[K [01;31m[Kerror: [m[Kstray â€˜[01m[K\222[m[Kâ€™ in program
+       joint_group_positions[1] -= 1/100 âˆ[01;31m[K’[m[K 0.1/100*(k/100 âˆ’ 5); // radians
+                                           [01;31m[K^[m[K
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:204:60:[m[K [01;31m[Kerror: [m[Kstray â€˜[01m[K\342[m[Kâ€™ in program
+       joint_group_positions[1] -= 1/100 âˆ’ 0.1/100*(k/100 [01;31m[Kâ[m[Kˆ’ 5); // radians
+                                                            [01;31m[K^[m[K
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:204:61:[m[K [01;31m[Kerror: [m[Kstray â€˜[01m[K\210[m[Kâ€™ in program
+       joint_group_positions[1] -= 1/100 âˆ’ 0.1/100*(k/100 â[01;31m[Kˆ[m[K’ 5); // radians
+                                                             [01;31m[K^[m[K
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:204:62:[m[K [01;31m[Kerror: [m[Kstray â€˜[01m[K\222[m[Kâ€™ in program
+       joint_group_positions[1] -= 1/100 âˆ’ 0.1/100*(k/100 âˆ[01;31m[K’[m[K 5); // radians
+                                                              [01;31m[K^[m[K
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:[m[K In function â€˜[01m[Kint main(int, char**)[m[Kâ€™:
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:203:47:[m[K [01;31m[Kerror: [m[Kexpected â€˜[01m[K;[m[Kâ€™ before numeric constant
+       joint_group_positions[0] -= 0.1/100 âˆ’ [01;31m[K0.01[m[K/100*(k/100 âˆ’ 5);
+                                               [01;31m[K^~~~[m[K
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:204:45:[m[K [01;31m[Kerror: [m[Kexpected â€˜[01m[K;[m[Kâ€™ before numeric constant
+       joint_group_positions[1] -= 1/100 âˆ’ [01;31m[K0.1[m[K/100*(k/100 âˆ’ 5); // radians
+                                             [01;31m[K^~~[m[K
+make[2]: *** [CMakeFiles/robot_model_node.dir/src/robot_model.cpp.o] Error 1
+make[1]: *** [CMakeFiles/robot_model_node.dir/all] Error 2
+make: *** [all] Error 2

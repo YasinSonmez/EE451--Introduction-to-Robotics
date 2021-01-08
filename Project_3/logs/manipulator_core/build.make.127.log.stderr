@@ -1,0 +1,7 @@
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:120:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_plan[m[K’ was not declared in this scope
+   move_group.execute([01;31m[Kmy_plan[m[K);
+                      [01;31m[K^~~~~~~[m[K
+make[2]: *** [CMakeFiles/robot_model_node.dir/src/robot_model.cpp.o] Error 1
+make[1]: *** [CMakeFiles/robot_model_node.dir/all] Error 2
+make: *** [all] Error 2

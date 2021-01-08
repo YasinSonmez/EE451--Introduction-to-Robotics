@@ -1,0 +1,16 @@
+[35m[1mScanning dependencies of target robot_model_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/robot_model_node.dir/src/robot_model.cpp.o[0m
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:187:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_pose[m[K’ was not declared in this scope
+     tf2::convert(q_new, [01;31m[Ktarget_pose[m[K.orientation);
+                         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:187:25:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kfgetpos[m[K’
+     tf2::convert(q_new, [01;36m[Ktarget_pose[m[K.orientation);
+                         [01;36m[K^~~~~~~~~~~[m[K
+                         [32m[Kfgetpos[m[K
+CMakeFiles/robot_model_node.dir/build.make:81: recipe for target 'CMakeFiles/robot_model_node.dir/src/robot_model.cpp.o' failed
+make[2]: *** [CMakeFiles/robot_model_node.dir/src/robot_model.cpp.o] Error 1
+CMakeFiles/Makefile2:246: recipe for target 'CMakeFiles/robot_model_node.dir/all' failed
+make[1]: *** [CMakeFiles/robot_model_node.dir/all] Error 2
+Makefile:159: recipe for target 'all' failed
+make: *** [all] Error 2

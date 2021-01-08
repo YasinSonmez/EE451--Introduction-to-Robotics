@@ -1,0 +1,10 @@
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:192:3:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kfor[m[K’
+   [01;31m[Kfor[m[K(int k = 1; k<600; k++)
+   [01;31m[K^~~[m[K
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:192:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kk[m[K’ was not declared in this scope
+   for(int k = 1; [01;31m[Kk[m[K<600; k++)
+                  [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/robot_model_node.dir/src/robot_model.cpp.o] Error 1
+make[1]: *** [CMakeFiles/robot_model_node.dir/all] Error 2
+make: *** [all] Error 2

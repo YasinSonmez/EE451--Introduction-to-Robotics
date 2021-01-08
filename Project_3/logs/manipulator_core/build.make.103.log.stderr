@@ -1,0 +1,54 @@
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:112:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kq_orig[m[K’ was not declared in this scope
+   [01;31m[Kq_orig[m[K = Quaternion(0, 0, 0, 1);
+   [01;31m[K^~~~~~[m[K
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:112:3:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kq_rot[m[K’
+   [01;36m[Kq_orig[m[K = Quaternion(0, 0, 0, 1);
+   [01;36m[K^~~~~~[m[K
+   [32m[Kq_rot[m[K
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:112:12:[m[K [01;31m[Kerror: [m[K‘[01m[KQuaternion[m[K’ was not declared in this scope
+   q_orig = [01;31m[KQuaternion[m[K(0, 0, 0, 1);
+            [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:112:12:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:346:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Geometry:11[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/joint_model.h:47[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/joint_model_group.h:41[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/robot_model.h:47[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model_loader/robot_model_loader.h:41[m[K,
+                 from [01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:5[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:273:58:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Quaternion[m[K’
+ template<typename Scalar, int Options = AutoAlign> class [01;36m[KQuaternion[m[K;
+                                                          [01;36m[K^~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/melodic/include/geometry_msgs/Pose.h:19:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/kinematics_base/kinematics_base.h:40[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/joint_model_group.h:43[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/robot_model.h:47[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model_loader/robot_model_loader.h:41[m[K,
+                 from [01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:5[m[K:
+[01m[K/opt/ros/melodic/include/geometry_msgs/Quaternion.h:63:61:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgeometry_msgs::Quaternion[m[K’
+ typedef ::geometry_msgs::Quaternion_<std::allocator<void> > [01;36m[KQuaternion[m[K;
+                                                             [01;36m[K^~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/melodic/include/tf2/transform_storage.h:36:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/tf2/buffer_core.h:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/tf2_ros/buffer_interface.h:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/tf2_ros/buffer.h:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/move_group_interface/move_group_interface.h:56[m[K,
+                 from [01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:8[m[K:
+[01m[K/opt/ros/melodic/include/tf2/LinearMath/Quaternion.h:28:7:[m[K [01;36m[Knote: [m[K  ‘[01m[Ktf2::Quaternion[m[K’
+ class [01;36m[KQuaternion[m[K : public QuadWord {
+       [01;36m[K^~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/melodic/include/octomap/math/Pose6D.h:38:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/octomap/octomap_types.h:43[m[K,
+                 from [01m[K/opt/ros/melodic/include/octomap/octomap.h:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/occupancy_map_monitor/occupancy_map.h:40[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/occupancy_map_monitor/occupancy_map_monitor.h:48[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/planning_scene_monitor/planning_scene_monitor.h:46[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit_visual_tools/moveit_visual_tools.h:47[m[K,
+                 from [01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:17[m[K:
+[01m[K/opt/ros/melodic/include/octomap/math/Quaternion.h:56:9:[m[K [01;36m[Knote: [m[K  ‘[01m[Koctomath::Quaternion[m[K’
+   class [01;36m[KQuaternion[m[K {
+         [01;36m[K^~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/robot_model_node.dir/src/robot_model.cpp.o] Error 1
+make[1]: *** [CMakeFiles/robot_model_node.dir/all] Error 2
+make: *** [all] Error 2

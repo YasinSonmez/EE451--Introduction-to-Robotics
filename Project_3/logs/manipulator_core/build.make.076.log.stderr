@@ -1,0 +1,18 @@
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:103:10:[m[K [01;31m[Kerror: [m[K‘[01m[KVector6d[m[K’ is not a member of ‘[01m[KEigen[m[K’
+   Eigen::[01;31m[KVector6d[m[K vw;
+          [01;31m[K^~~~~~~~[m[K
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:103:10:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KVectorXd[m[K’
+   Eigen::[01;36m[KVector6d[m[K vw;
+          [01;36m[K^~~~~~~~[m[K
+          [32m[KVectorXd[m[K
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:147:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kvw[m[K’ was not declared in this scope
+     [01;31m[Kvw[m[K = jacobian*q_dot;
+     [01;31m[K^~[m[K
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:147:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kw[m[K’
+     [01;36m[Kvw[m[K = jacobian*q_dot;
+     [01;36m[K^~[m[K
+     [32m[Kw[m[K
+make[2]: *** [CMakeFiles/robot_model_node.dir/src/robot_model.cpp.o] Error 1
+make[1]: *** [CMakeFiles/robot_model_node.dir/all] Error 2
+make: *** [all] Error 2

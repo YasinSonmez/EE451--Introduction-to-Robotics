@@ -1,0 +1,71 @@
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:146:29:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[KEigen::Vector3d {aka Eigen::Matrix<double, 3, 1>}[m[K’ and ‘[01m[KEigen::DenseCoeffsBase<Eigen::Product<Eigen::Matrix<double, -1, -1>, Eigen::Matrix<double, 2, 1>, 0>, 0>::CoeffReturnType {aka double}[m[K’)
+     v = (jacobian*q_dot)(0,3[01;31m[K)[m[K;
+                             [01;31m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:438:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Geometry:11[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/joint_model.h:47[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/joint_model_group.h:41[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/robot_model.h:47[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model_loader/robot_model_loader.h:41[m[K,
+                 from [01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:5[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[Kcandidate: Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&) [with _Scalar = double; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1]
+     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const Matrix& other)
+                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KEigen::DenseCoeffsBase<Eigen::Product<Eigen::Matrix<double, -1, -1>, Eigen::Matrix<double, 2, 1>, 0>, 0>::CoeffReturnType {aka double}[m[K’ to ‘[01m[Kconst Eigen::Matrix<double, 3, 1>&[m[K’
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[Kcandidate: template<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1]
+     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const DenseBase<OtherDerived>& other)
+                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:146:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::DenseBase<Derived>[m[K’ and ‘[01m[KEigen::DenseCoeffsBase<Eigen::Product<Eigen::Matrix<double, -1, -1>, Eigen::Matrix<double, 2, 1>, 0>, 0>::CoeffReturnType {aka double}[m[K’
+     v = (jacobian*q_dot)(0,3[01;36m[K)[m[K;
+                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:438:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Geometry:11[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/joint_model.h:47[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/joint_model_group.h:41[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/robot_model.h:47[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model_loader/robot_model_loader.h:41[m[K,
+                 from [01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:5[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[Kcandidate: template<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1]
+     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const EigenBase<OtherDerived> &other)
+                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:146:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::EigenBase<Derived>[m[K’ and ‘[01m[KEigen::DenseCoeffsBase<Eigen::Product<Eigen::Matrix<double, -1, -1>, Eigen::Matrix<double, 2, 1>, 0>, 0>::CoeffReturnType {aka double}[m[K’
+     v = (jacobian*q_dot)(0,3[01;36m[K)[m[K;
+                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:438:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Geometry:11[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/joint_model.h:47[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/joint_model_group.h:41[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/robot_model.h:47[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model_loader/robot_model_loader.h:41[m[K,
+                 from [01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:5[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[Kcandidate: template<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::ReturnByValue<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1]
+     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const ReturnByValue<OtherDerived>& func)
+                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:146:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::ReturnByValue<Derived>[m[K’ and ‘[01m[KEigen::DenseCoeffsBase<Eigen::Product<Eigen::Matrix<double, -1, -1>, Eigen::Matrix<double, 2, 1>, 0>, 0>::CoeffReturnType {aka double}[m[K’
+     v = (jacobian*q_dot)(0,3[01;36m[K)[m[K;
+                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:438:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Geometry:11[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/joint_model.h:47[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/joint_model_group.h:41[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/robot_model.h:47[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model_loader/robot_model_loader.h:41[m[K,
+                 from [01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:5[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:281:13:[m[K [01;36m[Knote: [m[Kcandidate: Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&&) [with _Scalar = double; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1]
+     Matrix& [01;36m[Koperator[m[K=(Matrix&& other) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)
+             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:281:13:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KEigen::DenseCoeffsBase<Eigen::Product<Eigen::Matrix<double, -1, -1>, Eigen::Matrix<double, 2, 1>, 0>, 0>::CoeffReturnType {aka double}[m[K’ to ‘[01m[KEigen::Matrix<double, 3, 1>&&[m[K’
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:392:13:[m[K [01;36m[Knote: [m[Kcandidate: template<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::RotationBase<OtherDerived, ColsAtCompileTime>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1]
+     Matrix& [01;36m[Koperator[m[K=(const RotationBase<OtherDerived,ColsAtCompileTime>& r);
+             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:392:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:146:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::RotationBase<OtherDerived, 1>[m[K’ and ‘[01m[KEigen::DenseCoeffsBase<Eigen::Product<Eigen::Matrix<double, -1, -1>, Eigen::Matrix<double, 2, 1>, 0>, 0>::CoeffReturnType {aka double}[m[K’
+     v = (jacobian*q_dot)(0,3[01;36m[K)[m[K;
+                             [01;36m[K^[m[K
+make[2]: *** [CMakeFiles/robot_model_node.dir/src/robot_model.cpp.o] Error 1
+make[1]: *** [CMakeFiles/robot_model_node.dir/all] Error 2
+make: *** [all] Error 2

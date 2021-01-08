@@ -1,0 +1,14 @@
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:83:8:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Klong[m[K’
+   std::[01;31m[Klong[m[K double joint_values[2];
+        [01;31m[K^~~~[m[K
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:85:63:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoint_values[m[K’ was not declared in this scope
+   kinematic_state->copyJointGroupPositions(joint_model_group, [01;31m[Kjoint_values[m[K);
+                                                               [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/yasin/EE451/Project_3/src/manipulator_core/src/robot_model.cpp:85:63:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kjoint_names[m[K’
+   kinematic_state->copyJointGroupPositions(joint_model_group, [01;36m[Kjoint_values[m[K);
+                                                               [01;36m[K^~~~~~~~~~~~[m[K
+                                                               [32m[Kjoint_names[m[K
+make[2]: *** [CMakeFiles/robot_model_node.dir/src/robot_model.cpp.o] Error 1
+make[1]: *** [CMakeFiles/robot_model_node.dir/all] Error 2
+make: *** [all] Error 2
