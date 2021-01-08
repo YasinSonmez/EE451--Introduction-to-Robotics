@@ -1,8 +1,8 @@
-# Project 2: Robot Kinematics and Inverse Kinematics Using Moveit Package
+# Project 3: Robot Velocity Kinematics and Differential Movements
 
 ## Introduction
 
-This project is focused on using a previously created PR robot to calculate forwards and inverse kinematics using the ROS Moveit interface.
+This project is focused on using a previously created PR robot to calculate velocity kinematics using the ROS Moveit interface.
 
 <img src="https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Images/pr_robot_velocity.gif" width="600">
 
