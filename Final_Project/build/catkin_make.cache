@@ -1,0 +1,2 @@
+scara_robot
+-DCATKIN_DEVEL_PREFIX=/home/yasin/EE451/Final_Project/devel -DCMAKE_INSTALL_PREFIX=/home/yasin/EE451/Final_Project/install -G Unix Makefiles
