@@ -52,7 +52,7 @@ roslaunch moveit_setup_assistant setup_assistant.launch
 
  ## About The Given Object Informations (Yaml File Format)
  - In order to spawn object in the simulation world, we needed to read parameter from a yaml file.
- - Due to our robot position "0, 0*, 0", we choose our 1mx1m square workspace in the rance of "0.4 < x < 1.4", "0.4 < y < 1.4".
+ - Due to our robot position "0, 0, 0", we choose our 1mx1m square workspace in the rance of "0.4 < x < 1.4", "0.4 < y < 1.4".
  - Our yaml file has the following structure and our C++ code depends on this structure.
  
 ```
