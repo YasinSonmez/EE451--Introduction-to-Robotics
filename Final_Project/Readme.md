@@ -37,7 +37,7 @@ rosrun function function_node
 
 ## Files
 - [`scara_robot_right.urdf`](https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Final_Project/URDF_Files/scara_robot_right.urdf) This is the description of the RRP robot using urdf format.
-- [`robot_model.cpp`](https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Project_3/src/manipulator_core/src/robot_model.cpp) C++ code for moving the robot and getting the coordinates and jacobian matrix using Moveit API.
+- [`function_node.cpp`](https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Final_Project/src/function/src/function_node.cpp) C++ code for moving the robot and getting the coordinates and jacobian matrix using Moveit API.
 
 ## Creation Process
 Here are the steps we've taken to create this project:
