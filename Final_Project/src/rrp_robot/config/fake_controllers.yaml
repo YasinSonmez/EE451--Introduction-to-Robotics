@@ -1,0 +1,20 @@
+controller_list:
+  - name: fake_end_effector_controller
+    joints:
+      - finger1_joint
+      - finger2_joint
+      - finger3_joint
+      - finger4_joint
+  - name: fake_chain_group_controller
+    joints:
+      - rotation1
+      - rotation2
+      - gripper_joint
+  - name: fake_base_group_controller
+    joints:
+      - rotation1
+      - rotation2
+      - gripper_joint
+initial:  # Define initial robot poses.
+  - group: base_group
+    pose: initial
