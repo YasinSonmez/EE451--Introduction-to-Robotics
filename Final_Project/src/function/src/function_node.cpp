@@ -1,3 +1,39 @@
+/*********************************************************************
+* Software License Agreement (BSD License)
+*
+*  Copyright (c) 2012, Willow Garage, Inc.
+*  All rights reserved.
+*
+*  Redistribution and use in source and binary forms, with or without
+*  modification, are permitted provided that the following conditions
+*  are met:
+*
+*   * Redistributions of source code must retain the above copyright
+*     notice, this list of conditions and the following disclaimer.
+*   * Redistributions in binary form must reproduce the above
+*     copyright notice, this list of conditions and the following
+*     disclaimer in the documentation and/or other materials provided
+*     with the distribution.
+*   * Neither the name of Willow Garage nor the names of its
+*     contributors may be used to endorse or promote products derived
+*     from this software without specific prior written permission.
+*
+*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+*  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+*  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+*  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+*  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+*  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+*  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+*  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+*  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+*  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+*  POSSIBILITY OF SUCH DAMAGE.
+*********************************************************************/
+
+/* Author: Ioan Sucan, Ridhwan Luthra*/
+
 // ROS
 #include <ros/ros.h>
 
@@ -119,62 +155,47 @@ int main(int argc, char** argv)
   ROS_INFO("Reference frame: %s", group.getEndEffectorLink().c_str());
 
   geometry_msgs::Pose target_pose1;
-  //group.setGoalTolerance(0.1);
-
-
-
+  group.setGoalTolerance(0.03);
 
   for(int i=0; i<N; i++)	//loop for pick and place operation
   {
 
-  target_pose1.position.x = 0.5;
-  target_pose1.position.y = 0.5;
-  target_pose1.position.z = 0.68;
-  group.setApproximateJointValueTarget(target_pose1, "gripper_link");
-  group.plan(my_plan);
-  group.execute(my_plan);
-  group.move();
-
+// go to the object position
   target_pose1.position.x = object[i][0];
   target_pose1.position.y = object[i][1];
-  target_pose1.position.z = 0.68;
-  group.setApproximateJointValueTarget(target_pose1, "gripper_link");
+  target_pose1.position.z = object[i][3] + 0.24;
+  group.setJointValueTarget(target_pose1);
   group.move();
   ROS_INFO("OBJECT REACHED");
 
-  target_pose1.position.z = object[i][3] + 0.21;
-  group.setApproximateJointValueTarget(target_pose1, "gripper_link");
-  group.move();
-
+// attach to the object
   group.attachObject(collision_objects[i].id);
   ROS_INFO("OBJECT ATTACHED");
 
-  target_pose1.position.z = 0.68;
-  group.setApproximateJointValueTarget(target_pose1, "gripper_link");
-  group.move();
-
+// go to the goal position
   target_pose1.position.x = object[i][4];
   target_pose1.position.y = object[i][5];
-  target_pose1.position.z = 0.68;
-  group.setApproximateJointValueTarget(target_pose1, "gripper_link");
+  group.setJointValueTarget(target_pose1);
   group.move();
   ROS_INFO("GOAL REACHED");
 
-  target_pose1.position.z = object[i][3] + 0.21;
-  group.setApproximateJointValueTarget(target_pose1, "gripper_link");
-  group.move();
-
+// detach the object
   group.detachObject(collision_objects[i].id);
   ROS_INFO("OBJECT DETACHED");
 
+  ROS_INFO_STREAM(i << ". OBJECT TRANSPORTED");
+
   }
 
+// go to the initial position
   target_pose1.position.x = 0.5;
   target_pose1.position.y = 0.5;
   target_pose1.position.z = 0.68;
-  group.setApproximateJointValueTarget(target_pose1);
+  group.setJointValueTarget(target_pose1);
   group.move();
   ROS_INFO("FINAL POSITION REACHED");
+
+  ROS_INFO_STREAM("TOTAL NUMBER OF OBJECTS TRANSPORTED: " << N);
 
   ros::waitForShutdown();
   return 0;
