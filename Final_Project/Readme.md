@@ -7,8 +7,10 @@ This project is focused on
 - Spawning objects with different sizes on different coordinates
 - Picking & Placing using the ROS Moveit interface
 
-<img src="https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Images/chess2.gif" width="1000">
-
+<p float="left">
+  <img src="https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Images/chess2.gif" width="450" />
+  <img src="https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Images/arrange.gif" width="450" /> 
+</p>
 
 ## Dependencies
 - ROS
@@ -21,15 +23,23 @@ catkin_make
 ```
 - Then read the parameters from the YAML file:
 ```
+To see the demo of arranging objects:
 roslaunch function read_params.launch
+
+To see the scholar's mate demo:
+roslaunch function read_params_2.launch
 ```
 - Then launch the robot config file and open the RViz:
 ```
-roslaunch rrp_robot demo.launch
+roslaunch rrp_robot_2 demo.launch
 ```
 - Then run the pick & place code that also spawns the cylinders:
 ```
+To see the demo of arranging objects:
 rosrun function function_node
+
+To see the scholar's mate demo:
+rosrun chess chess_node
 ```
 - First, you should see the RRP robot spawned
 - After reading the parameters for cylinder blocks positions, cylinders are spawned
@@ -43,7 +53,7 @@ rosrun function function_node
 ## Creation Process
 Here are the steps we've taken to create this project:
 1. Written the urdf file
-2. Created package rrp_robot of RRP robot using moveit setup assistant(and defined move groups):
+2. Created package 'rrp_robot_2' of RRP robot using moveit setup assistant(and defined move groups):
 ```
 roslaunch moveit_setup_assistant setup_assistant.launch
 ```
@@ -52,7 +62,7 @@ roslaunch moveit_setup_assistant setup_assistant.launch
 
  ## About The Given Object Informations (Yaml File Format)
  - In order to spawn object in the simulation world, we needed to read parameter from a yaml file.
- - Due to our robot position "0, 0, 0", we choose our 1mx1m square workspace in the range of "0.4 < x < 1.4", "0.4 < y < 1.4".
+ - Due to our robot position "0, 0, 0", we choose our 1mx1m square workspace in the range of "0.2 < x < 1.2", "0.2 < y < 1.2".
  - Our yaml file has the following structure and our C++ code depends on this structure.
  
 ```
