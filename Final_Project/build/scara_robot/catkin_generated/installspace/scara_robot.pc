@@ -1,8 +1,0 @@
-prefix=/home/yasin/EE451/Final_Project/install
-
-Name: scara_robot
-Description: Description of scara_robot
-Version: 0.3.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
