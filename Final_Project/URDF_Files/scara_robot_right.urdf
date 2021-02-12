@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<robot name="scara_robot_right">
+
+<!-- simple two-axis scara robot -->
+
+<!-- this is the scara at the right side of the conveyo belt -->
+<gazebo>
+<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+</plugin>
+</gazebo>
+ 
+
+<!-- world link -->
+<link name="world"/>
+
+<!-- base_link and its fixed joint -->
+<joint name="joint_fix" type="fixed">
+  <parent link="world"/>
+  <child link="base_link"/>
+</joint>
+
+<link name="base_link">
+  <collision>
+    <origin xyz="0 0 0.2" rpy="0 0 0"/>
+    <geometry>
+      <cylinder length="0.4" radius="0.1"/>
+    </geometry>
+  </collision>
+
+  <visual>
+    <origin xyz="0 0 0.2" rpy="0 0 0"/>
+    <geometry>
+      <cylinder length="0.4" radius="0.1"/>
+    </geometry>
+  </visual>
+
+  <inertial>
+    <origin xyz="0 0 0.2" rpy="0 0 0"/>
+    <mass value="1"/>
+    <inertia
+      ixx="1.0" ixy="0.0" ixz="0.0"
+      iyy="1.0" iyz="0.0"
+      izz="1.0"/>
+  </inertial>
+</link>
+
+
+<!-- the first arm of the scara, with revolute joint rotating along z axis -->
+<!-- arm length between two rotation axis is 1 -->
+<joint name="rotation1" type="revolute">
+  <parent link="base_link"/>
+  <child link="arm1"/>
+  <origin xyz="0 0 0.4" rpy="0 0 0"/>
+  <axis xyz="0 0 1"/>
+  <limit effort="100" velocity="100" lower="-2.6" upper="2.6"/>
+</joint>
+
+<link name="arm1">
+  <collision>
+    <origin xyz="0 0.5 0.05" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.1 1 0.1"/>
+    </geometry>
+  </collision>
+
+  <visual>
+    <origin xyz="0 0.5 0.05" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.1 1 0.1"/>
+    </geometry>
+  </visual>
+
+  <inertial>
+    <origin xyz="0 0 0.05" rpy="0 0 0"/>
+    <mass value="1"/>
+    <inertia
+      ixx="0.001" ixy="0.0" ixz="0.0"
+      iyy="0.001" iyz="0.0"
+      izz="0.001"/>
+  </inertial>
+</link>
+
+<gazebo reference="arm1">
+  <material>Gazebo/Grey</material>
+</gazebo>
+
+
+<!-- the second arm and its rotation joint -->
+<!-- arm length between two rotation axis is 0.8 -->
+<joint name="rotation2" type="revolute">
+  <parent link="arm1"/>
+  <child link="arm2"/>
+  <origin xyz="0 1 0.1" rpy="0 0 0"/>
+  <axis xyz="0 0 1"/>
+  <limit effort="100" velocity="100" lower="-3.00" upper="3.00"/>
+  <!-- if set to -pi to pi, robot will self collide -->
+</joint>
+
+<link name="arm2">
+  <collision>
+    <origin xyz="0 0.4 0.05" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.1 1 0.1"/>
+    </geometry>
+  </collision>
+
+  <visual>
+    <origin xyz="0 0.4 0.05" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.1 1 0.1"/>
+    </geometry>
+  </visual>
+
+  <inertial>
+    <origin xyz="0 0 0.05" rpy="0 0 0"/>
+    <mass value="1"/>
+    <inertia
+      ixx="0.001" ixy="0.0" ixz="0.0"
+      iyy="0.001" iyz="0.0"
+      izz="0.001"/>
+  </inertial>
+</link>
+
+<gazebo reference="arm2">
+  <material>Gazebo/Grey</material>
+</gazebo>
+
+
+<!-- gripper base link for the four finger to attach, can move vertically -->
+<joint name="gripper_joint" type="prismatic">
+  <parent link="arm2"/>
+  <child link="gripper_link"/>
+  <origin xyz="0 0.8 0" rpy="0 0 0"/>
+  <axis xyz="0 0 1"/>
+  <limit effort="100" velocity="100" lower="-0.25" upper="0.2"/>
+</joint>
+
+<link name="gripper_link">
+  <collision>
+    <origin xyz="0 0 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <cylinder length="0.2" radius="0.02"/>
+    </geometry>
+  </collision>
+
+  <visual>
+    <origin xyz="0 0 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <cylinder length="0.2" radius="0.02"/>
+    </geometry>
+  </visual>
+
+  <inertial>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <mass value="0.00001"/>
+    <inertia
+      ixx="0.00001" ixy="0.0" ixz="0.0"
+      iyy="0.00001" iyz="0.0"
+      izz="0.00001"/>
+  </inertial>
+</link>
+
+<joint name="end_effector_joint" type="revolute">
+  <parent link="gripper_link"/>
+  <child link="end_effector_link"/>
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <axis xyz="0 0 1"/>
+  <limit effort="100" velocity="100" lower="-3.00" upper="3.00"/>
+</joint>
+
+<link name="end_effector_link">
+  <collision>
+    <origin xyz="0 0 -0.2" rpy="0 0 0"/>
+    <geometry>
+      <sphere radius="0.05"/>
+    </geometry>
+  </collision>
+
+  <visual>
+    <origin xyz="0 0 -0.2" rpy="0 0 0"/>
+    <geometry>
+      <sphere radius="0.05"/>
+    </geometry>
+    <material name="blue">
+      <color rgba="0 0 1 1"/>
+    </material>
+  </visual>
+
+  <inertial>
+    <origin xyz="0 0 -0.2" rpy="0 0 0"/>
+    <mass value="0.00001"/>
+    <inertia
+      ixx="0.00001" ixy="0.0" ixz="0.0"
+      iyy="0.00001" iyz="0.0"
+      izz="0.00001"/>
+  </inertial>
+</link>
+
+
+
+
+</robot>
+
+
+
