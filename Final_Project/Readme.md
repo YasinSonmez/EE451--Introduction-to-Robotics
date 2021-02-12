@@ -79,3 +79,6 @@ p2x: 0.4  # Second object initial x position
 .
 .
 ```
+
+## References
+1- https://github.com/yangliu28/two_scara_collaboration
