@@ -7,7 +7,7 @@ This project is focused on
 - Spawning objects with different sizes on different coordinates
 - Picking & Placing using the ROS Moveit interface
 
-<img src="https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Images/RRP_cylinders.png" width="800">
+<img src="https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Images/chess2.gif" width="1000">
 
 
 ## Dependencies
