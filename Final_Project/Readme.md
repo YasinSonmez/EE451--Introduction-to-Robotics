@@ -9,7 +9,7 @@ This project is focused on
 
 <p float="left">
   <img src="https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Images/chess2.gif" width="450" />
-  <img src="https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Images/arrange_2.gif" width="450" /> 
+  <img src="https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Images/arrange_2.gif" width="470" /> 
 </p>
 
 ## Dependencies
