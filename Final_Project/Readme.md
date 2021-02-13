@@ -46,9 +46,11 @@ rosrun chess chess_node
 - Then the robot will move towards the intended coordinate and will pick & place to goal positions one by one
 
 ## Files
-- [`params.yaml`](https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Final_Project/src/function/config/params.yaml) Given objects' parameter file in yaml format.
+- [`params.yaml`](https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Final_Project/src/function/config/params.yaml) Given objects' parameter file in yaml format (height, radius, position, goal position).
+- [`params_2.yaml`](https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Final_Project/src/function/config/params_2.yaml) Given objects' parameter file in yaml format for chess configuration (height, radius, position, goal position).
 - [`scara_robot_right.urdf`](https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Final_Project/URDF_Files/scara_robot_right.urdf) This is the description of the RRP robot using urdf format.
-- [`function_node.cpp`](https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Final_Project/src/function/src/function_node.cpp) C++ code for spawning objects and pick & place operation of the robot using MoveIt!.
+- [`function_node.cpp`](https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Final_Project/src/function/src/function_node.cpp) C++ code to spawn objects and pick & place operation of the robot using MoveIt!.
+- [`chess.cpp`](https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Final_Project/src/chess/src/chess.cpp) C++ code to spawn objects and pick & place operation of the robot using MoveIt! for the chess configuration.
 
 ## Creation Process
 Here are the steps we've taken to create this project:
@@ -57,7 +59,10 @@ Here are the steps we've taken to create this project:
 ```
 roslaunch moveit_setup_assistant setup_assistant.launch
 ```
-3. Created node 'function_node' to spawn the cylinders and move the robot using Moveit:
+3. Created yaml file to spesify object positions.
+4. Created node 'function_node' to spawn the cylinders and move the robot using Moveit:
+- Edited cmakelists.txt to include necessary packages and made the code executable 
+5. Created node 'chess_node' to spawn the cylinders in chess configuration and move the robot using Moveit to do a scholar's mate:
 - Edited cmakelists.txt to include necessary packages and made the code executable 
 
  ## About The Given Object Informations (Yaml File Format)
