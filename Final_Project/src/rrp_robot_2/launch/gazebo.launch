@@ -2,7 +2,7 @@
 <launch>
   <arg name="paused" default="false"/>
   <arg name="gazebo_gui" default="true"/>
-  <arg name="urdf_path" default="/home/ee451/final_project_ws/URDF_Files/scara_robot_right.urdf"/>
+  <arg name="urdf_path" default="$(find rrp_robot_2)/URDF_Files/scara_robot_right.urdf"/>
 
   <!-- startup simulated world -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">

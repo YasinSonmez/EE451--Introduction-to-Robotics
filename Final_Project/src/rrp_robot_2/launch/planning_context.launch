@@ -6,7 +6,7 @@
   <arg name="robot_description" default="robot_description"/>
 
   <!-- Load universal robot description format (URDF) -->
-  <param if="$(arg load_robot_description)" name="$(arg robot_description)" textfile="/home/ee451/final_project_ws/URDF_Files/scara_robot_right.urdf"/>
+  <param if="$(arg load_robot_description)" name="$(arg robot_description)" textfile="$(find rrp_robot_2)/URDF_Files/scara_robot_right.urdf"/>
 
   <!-- The semantic description that corresponds to the URDF -->
   <param name="$(arg robot_description)_semantic" textfile="$(find rrp_robot_2)/config/scara_robot_right.srdf" />
