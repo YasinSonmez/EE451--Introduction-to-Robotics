@@ -22,7 +22,7 @@
   <arg name="gazebo_gui" default="true"/>
   <arg name="paused" default="false"/>
   <!-- By default, use the urdf location provided from the package -->
-  <arg name="urdf_path" default="/home/yasin/EE451/Project_1/pr.urdf"/>
+  <arg name="urdf_path" default="$(find pr_config)/urdf_files/pr.urdf"/>
 
   <!-- launch the gazebo simulator and spawn the robot -->
   <include file="$(find pr_config)/launch/gazebo.launch" >

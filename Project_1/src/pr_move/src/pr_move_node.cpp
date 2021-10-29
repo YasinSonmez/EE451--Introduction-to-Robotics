@@ -47,8 +47,7 @@
 
 #include <moveit_visual_tools/moveit_visual_tools.h>
 
-
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
   ros::init(argc, argv, "move_group_interface_tutorial");
   ros::NodeHandle node_handle;
@@ -74,7 +73,7 @@ int main(int argc, char** argv)
   moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
 
   // Raw pointers are frequently used to refer to the planning group for improved performance.
-  const robot_state::JointModelGroup* joint_model_group =
+  const robot_state::JointModelGroup *joint_model_group =
       move_group.getCurrentState()->getJointModelGroup(PLANNING_GROUP);
 
   // Visualization
@@ -131,13 +130,13 @@ int main(int argc, char** argv)
   current_state->copyJointGroupPositions(joint_model_group, joint_group_positions);
 
   // Now, let's modify one of the joints, plan to the new joint space goal and visualize the plan.
-  joint_group_positions[0] = -0.33;  
-  joint_group_positions[1] = -3.14;// radians
+  joint_group_positions[0] = -0.33;
+  joint_group_positions[1] = -3.14; // radians
   move_group.setJointValueTarget(joint_group_positions);
 
   moveit::planning_interface::MoveGroupInterface::Plan my_plan;
   bool success = (move_group.plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
-  move_group.execute(my_plan);	
+  move_group.execute(my_plan);
 
   // Planning to a joint-space goal 2
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -153,13 +152,12 @@ int main(int argc, char** argv)
   current_state->copyJointGroupPositions(joint_model_group, joint_group_positions);
 
   // Now, let's modify one of the joints, plan to the new joint space goal and visualize the plan.
-  joint_group_positions[0] = -1.0;  
-  joint_group_positions[1] = 3.14;// radians
+  joint_group_positions[0] = -1.0;
+  joint_group_positions[1] = 3.14; // radians
   move_group.setJointValueTarget(joint_group_positions);
 
   success = (move_group.plan(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
-  move_group.execute(my_plan);	
-
+  move_group.execute(my_plan);
 
   // Finding coordinates
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -184,38 +182,41 @@ int main(int argc, char** argv)
   // model for a particular group, e.g. the "panda_arm" of the Panda
   // robot.
   robot_state::RobotStatePtr kinematic_state(new robot_state::RobotState(kinematic_model));
-  //kinematic_state->setToDefaultValues();
-  const robot_state::JointModelGroup* joint_model_group2 = kinematic_model->getJointModelGroup("pr_arm");
+  // kinematic_state->setToDefaultValues();
+  const robot_state::JointModelGroup *joint_model_group2 = kinematic_model->getJointModelGroup("pr_arm");
 
-  const std::vector<std::string>& joint_names = joint_model_group2->getVariableNames();
+  const std::vector<std::string> &joint_names = joint_model_group2->getVariableNames();
 
   // find the coordinates for state
-  const Eigen::Isometry3d& end_effector_state = kinematic_state->getGlobalLinkTransform("link3");
+  const Eigen::Isometry3d &end_effector_state = kinematic_state->getGlobalLinkTransform("link3");
 
   /* Print end-effector pose. Remember that this is in the model frame */
-  ROS_INFO_STREAM("Coordinate: \n" << end_effector_state.translation() << "\n");
+  ROS_INFO_STREAM("Coordinate: \n"
+                  << end_effector_state.translation() << "\n");
 
   // define and multiply with the translation matrix 1
   Eigen::Matrix4d transformation;
   Eigen::Vector4d vector;
   vector << end_effector_state.translation()[0], end_effector_state.translation()[1], end_effector_state.translation()[2], 1;
   transformation << 1, 0, 0, 0.1,
-		    0, 1, 0, -0.2,
-		    0, 0, 1, 0,
-                    0, 0, 0, 1;
-  Eigen::Vector4d transformed = transformation*vector;
+      0, 1, 0, -0.2,
+      0, 0, 1, 0,
+      0, 0, 0, 1;
+  Eigen::Vector4d transformed = transformation * vector;
   Eigen::Vector3d transformed3d;
-  transformed3d << transformed(0),transformed(1),transformed(2);
-  ROS_INFO_STREAM("Transformed Coordinate 1: \n" << transformed3d << "\n");
+  transformed3d << transformed(0), transformed(1), transformed(2);
+  ROS_INFO_STREAM("Transformed Coordinate 1: \n"
+                  << transformed3d << "\n");
 
   // define and multiply with the translation matrix 2
   transformation << 0, -1, 0, 0,
-		    1, 0, 0, 0,
-		    0, 0, 1, 0,
-                    0, 0, 0, 1;
-  transformed = transformation*vector;
-  transformed3d << transformed(0),transformed(1),transformed(2);
-  ROS_INFO_STREAM("Transformed Coordinate 2: \n" << transformed3d << "\n");
+      1, 0, 0, 0,
+      0, 0, 1, 0,
+      0, 0, 0, 1;
+  transformed = transformation * vector;
+  transformed3d << transformed(0), transformed(1), transformed(2);
+  ROS_INFO_STREAM("Transformed Coordinate 2: \n"
+                  << transformed3d << "\n");
 
   ros::shutdown();
   return 0;
