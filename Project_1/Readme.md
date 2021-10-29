@@ -27,7 +27,7 @@ rosrun pr_move pr_move_node
 - After robot moves through it's workspace the position of the point should be printed to console along with it's translated and rotated positions.
 
 ## Files
-- [`pr.urdf`](https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Project_1/src/urdf%20files/pr.urdf) This is the description of robot using urdf format.
+- [`pr.urdf`](https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Project_1/src/pr_config/urdf_files/pr.urdf) This is the description of robot using urdf format.
 - [`pr_move_node.cpp`](https://github.com/YasinSonmez/EE451--Introduction-to-Robotics/blob/master/Project_1/src/pr_move/src/pr_move_node.cpp) C++ code for moving the robot and getting the ccordinates using Moveit API.
 
 ## Creation Process
